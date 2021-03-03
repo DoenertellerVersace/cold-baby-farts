@@ -1,0 +1,3 @@
+S3
+Spandau, Stresow, Pichelsberg, Olympiastadion, Heerstraße, Messe Süd, Westkreuz, Charlottenburg, Savignyplatz, Zoologischer Garten, Tiergarten, Bellevue, Hauptbahnhof, Friedrichstraße, Hackescher Markt, Alexanderplatz, Jannowitzbrücke, Ostbahnhof, Warschauer Straße, Ostkreuz, Rummelsburg, Wuhlheide, Erkner
+False

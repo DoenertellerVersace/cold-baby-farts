@@ -1,0 +1,3 @@
+S5
+Westkreuz, Charlottenburg, Savignyplatz, Zoologischer Garten, Tiergarten, Bellevue, Hauptbahnhof, Friedrichstraße, Hackescher Markt, Alexanderplatz, Jannowitzbrücke, Ostbahnhof, Warschauer Straße, Ostkreuz, Nöldnerplatz, Lichtenberg, Friedrichsfelde Ost, Biesdorf, Wuhletal, Mahlsdorf, Strausberg, Strausberg Nord
+False

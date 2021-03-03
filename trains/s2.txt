@@ -1,0 +1,3 @@
+S2
+Bernau, Buch, Karow, Blankenburg, Pankow-Heinersdorf, Pankow, Bornholmer Straße, Gesundbrunnen, Humboldthain, Nordbahnhof, Oranienburger Straße, Friedrichstraße, Brandenburger Tor, Potsdamer Platz, Anhalter Bahnhof, Yorckstraße, Südkreuz, Priesterweg, Marienfelde, Lichtenrade, Blankenfelde
+False

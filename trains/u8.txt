@@ -1,0 +1,3 @@
+U8
+Hermannstraße, Leinestraße, Boddinstraße, Hermannplatz, Schönleinstraße, Kottbusser Tor, Moritzplatz, Heinrich-Heine-Straße, Jannowitzbrücke, Alexanderplatz, Weinmeisterstraße, Rosenthaler Platz, Bernauer Straße, Voltastraße, Gesundbrunnen, Pankstraße, Osloer Straße, Franz-Neumann-Platz, Residenzstraße, Paracelsus-Bad, Lindauer Allee, Karl-Bonhoeffer-Nervenklinik, Rathaus Reinickendorf, Wittenau
+False
