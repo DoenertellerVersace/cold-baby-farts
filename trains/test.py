@@ -1,5 +1,32 @@
-import json
+class Singleton:
+    __instance = None
 
-test = json.loads("./test.json")
+    @staticmethod
+    def getInstance():
+        """ Static access method. """
+        if Singleton.__instance == None:
+            Singleton()
+        return Singleton.__instance
 
-print(test)
+    def __init__(self):
+        """ Virtually private constructor. """
+        if Singleton.__instance != None:
+            raise Exception("This class is a singleton!")
+        else:
+            Singleton.__instance = self
+
+
+s = Singleton()
+print(s)
+
+try:
+    b = Singleton()
+    print(b)
+except Exception as e:
+    pass
+
+s = Singleton.getInstance()
+print(s)
+
+s = Singleton.getInstance()
+print(s)
