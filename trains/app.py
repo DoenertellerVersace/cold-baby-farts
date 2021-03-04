@@ -24,11 +24,6 @@ def search():
     trip1 = Trip(start, dest)
     blub = trip1.get_itinerary(int(max))
     blub2 = [Result(x).print_result() for x in blub]
-    for res in blub2:
-        print(res)
-        for leg in res[3]:
-            print(leg)
-        print("-------")
     return render_template("connection.html", result=blub2)
 
 
