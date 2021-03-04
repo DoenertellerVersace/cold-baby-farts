@@ -1,7 +1,11 @@
+from typing import Any
+
 from Context import *
 
 
+
 class Trip:
+
     def __init__(self, start, destination):
         self.start = start
         self.destination = destination
@@ -209,49 +213,8 @@ class Trip:
                 beste_bewertung = this_bewertung
             if this_bewertung <= 1.8 * beste_bewertung and this_changes <= mxc:
                 self.nbt_list.append(item)
+
         return self.nbt_list
-
-    def print_itinerary_list(self):
-        self.results = []
-        for item in self.nbt_list:
-            if item[1] == 0:
-                self.results.append(
-                    str(item[3][0][0]) + "\n---> " + str(item[3][0][3]) + " --->  Richtung " + item[3][0][2].ziel(
-                        item[3][0][5]) + "\n" +
-                    str(item[3][0][1]) + "\n\n" + str(item[2]) + " Stationen zu fahren, kein Umstieg."
-                )
-            elif item[1] == 1:
-                self.results.append(
-                    str(item[3][0][0]) + "\n---> " + str(item[3][0][3]) + " --->  Richtung " + item[3][0][2].ziel(
-                        item[3][0][5]) + "\n" +
-                    str(item[3][0][1]) + "\n++++++\n" + str(item[3][1][0]) + "\n---> " + str(
-                        item[3][1][3]) + " --->  Richtung " + item[3][1][2].ziel(item[3][1][5]) + "\n" +
-                    str(item[3][1][1]) + "\n\n" + str(item[2]) + " Stationen zu fahren, 1 Umstieg."
-                )
-            elif item[1] == 2:
-                self.results.append(
-                    str(item[3][0][0]) + "\n---> " + str(item[3][0][3]) + " --->  Richtung " + item[3][0][2].ziel(
-                        item[3][0][5]) + "\n" +
-                    str(item[3][0][1]) + "\n++++++\n" + str(item[3][1][0]) + "\n---> " + str(
-                        item[3][1][3]) + " --->  Richtung " + item[3][1][2].ziel(item[3][1][5]) + "\n" +
-                    str(item[3][1][1]) + "\n++++++\n" + str(item[3][2][0]) + "\n---> " + str(
-                        item[3][2][3]) + " --->  Richtung " + item[3][2][2].ziel(item[3][2][5]) + "\n" +
-                    str(item[3][2][1]) + "\n\n" + str(item[2]) + " Stationen zu fahren, 2 Umstiege."
-                )
-            elif item[1] == 3:
-                self.results.append(
-                    str(item[3][0][0]) + "\n---> " + str(item[3][0][3]) + " --->  Richtung " + item[3][0][2].ziel(
-                        item[3][0][5]) + "\n" +
-                    str(item[3][0][1]) + "\n++++++\n" + str(item[3][1][0]) + "\n---> " + str(
-                        item[3][1][3]) + " --->  Richtung " + item[3][1][2].ziel(item[3][1][5]) + "\n" +
-                    str(item[3][1][1]) + "\n++++++\n" + str(item[3][2][0]) + "\n---> " + str(
-                        item[3][2][3]) + " --->  Richtung " + item[3][2][2].ziel(item[3][2][5]) + "\n" +
-                    str(item[3][2][1]) + "\n++++++\n" + str(item[3][3][0]) + "\n---> " + str(
-                        item[3][3][3]) + " --->  Richtung " + item[3][3][2].ziel(item[3][3][5]) + "\n" +
-                    str(item[3][3][1]) + "\n\n" + str(item[2]) + " Stationen zu fahren, 3 Umstiege."
-                )
-
-        return "Es gibt folgende Verbindungen:\n\n" + "\n\n--------\n\n".join(self.results)
 
 
 def direct_connect(start, dest):

@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
-from Route import *
 from Trip import *
+from Context import *
+from Result import Result
 
 app = Flask(__name__)
 
@@ -22,8 +23,9 @@ def search():
     print("Anfrage für %s nach %s mit max Umsteigen %s" % (start, dest, max))
     trip1 = Trip(start, dest)
     blub = trip1.get_itinerary(int(max))
-    print(blub)
-    return render_template("connection.html", result=blub)
+    blub2 = [Result(x).print_result() for x in blub]
+
+    return render_template("connection.html", result=blub2)
 
 
 if __name__ == "__main__":

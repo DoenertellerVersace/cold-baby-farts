@@ -8,7 +8,9 @@
 <h1>Es gibt folgende Verbindungen</h1>
 
 {% for line in result %}
-<h1>{line.}</h1>
+    {% for x in line%}
+        <h1>{% print(x) %}</h1>
+    {% endfor %}
 {% endfor %}
 
 </body>
