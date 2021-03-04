@@ -13,11 +13,6 @@ class Result:
             line = leg[3]
             stops = str(leg[4])
             dir = leg[2].ziel(leg[5])
-            print(start)
-            print(dir)
-            print(dest)
-            print(stops)
-            print(line)
             leg_string = ["von " + start, "nach " + dest, "Linie " + line, "Richtung " + dir, stops + " Stationen"]
             self.__string[3].append(leg_string)
 
