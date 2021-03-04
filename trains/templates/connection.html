@@ -1,16 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        body {
+            background-color: #F5F6CE;
+        }
+    </style>
     <meta charset="UTF-8">
     <title>Result</title>
 </head>
 <body>
-<h1>Es gibt folgende Verbindungen</h1>
-
-{% for line in result %}
-    {% for x in line%}
-        <h1>{% print(x) %}</h1>
+<h2>Es gibt folgende Verbindungen:</h2>
+<br>
+----------------------------------------------------------------------------------------------------------------------------
+{% for res in result %}
+<table>
+    <tr><td>
+        <i>&nbsp&nbsp&nbsp&nbsp&nbsp{% print(res[0]) %}</i>
+    </td><td>
+        <i>{% print(res[2]) %}</i>
+    </td><td>
+        {% print(" ") %}
+    </td><td>
+        <i>{% print(res[1]) %}</i>
+    </td><td>
+        {% print(" ") %}
+    </td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    {% for leg in res[3] %}
+        <tr>
+            <td>
+                {% print(leg[0][:4]) %} &nbsp &nbsp<b>{% print(leg[0][4:]) %}</b>
+            </td>
+            <td>
+                {% print("") %}
+            </td>
+            <td>
+                {% print(leg[2]) %}
+            </td><td>
+        {% print(" ") %}
+    </td>
+            <td>
+                {% print(leg[3]) %}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                {% print(leg[1][:5]) %} &nbsp <b>{% print(leg[1][5:]) %}</b>
+            </td>
+            <td>
+                {% print("") %}
+            </td>
+            <td>
+                {% print("") %}
+            </td>
+            <td>
+                {% print(leg[4]) %}
+            </td><td>
+        {% print(" ") %}
+    </td>
+        </tr>
     {% endfor %}
+</table>
+----------------------------------------------------------------------------------------------------------------------------
 {% endfor %}
 
 </body>

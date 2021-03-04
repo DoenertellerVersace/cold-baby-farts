@@ -35,8 +35,7 @@ class Trip:
             for z in direct_connect(start, dest):
                 line, length, direction = z
                 leg = [start, dest, line, line.line(), length, direction]
-                leggy = []
-                leggy.append(leg)
+                leggy = [leg]
                 itineraries.append((0, length, leggy))
                 if length_direct >= length:
                     length_direct = length

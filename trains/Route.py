@@ -34,6 +34,8 @@ class Route():
                 return self.__stops[-1]
             elif direction == "in":
                 return self.__stops[0]
+        else:
+            return "Jesus fuck"
 
 
 def get_route(filename):
@@ -45,9 +47,6 @@ def get_route(filename):
         for a in lines[1].split(","):
             stops.append(a.strip())
     return lines[0], stops, lines[2]
-
-
-
 
 
 def print_leg(start, dest, line, stops):
