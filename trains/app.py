@@ -23,12 +23,7 @@ def search():
     print("Anfrage für %s nach %s mit max Umsteigen %s" % (start, dest, max))
     trip1 = Trip(start, dest)
     blub = trip1.get_itinerary(int(max))
-    blub2 = [Result(x).print_result() for x in blub]
-    for res in blub2:
-        print(res)
-        for leg in res[3]:
-            print(leg)
-        print("-------")
+    blub2 = [Result(x).print_result() for x in blub], start, dest
     return render_template("connection.html", result=blub2)
 
 

@@ -7,13 +7,13 @@
         }
     </style>
     <meta charset="UTF-8">
-    <title>Result</title>
+    <title>Suchergebnisse</title>
 </head>
 <body>
-<h2>Es gibt folgende Verbindungen:</h2>
+<h2>Von {% print(result[1]) %} nach {% print(result[2]) %} gibt es folgende Verbindungen:</h2>
 <br>
 ----------------------------------------------------------------------------------------------------------------------------
-{% for res in result %}
+{% for res in result[0] %}
 <table>
     <tr><td>
         <i>&nbsp&nbsp&nbsp&nbsp&nbsp{% print(res[0]) %}</i>
@@ -26,9 +26,25 @@
     </td><td>
         {% print(" ") %}
     </td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td></tr>
-    <tr><td></td><td></td><td></td><td></td><td></td></tr>
+    <tr><td></td>
+        <td></td>
+        <td></td><td></td><td></td></tr>
+    <tr><td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+
+        </td>
+        <td>
+
+    </td></tr>
     {% for leg in res[3] %}
         <tr>
             <td>

@@ -203,7 +203,7 @@ class Trip:
         beste_bewertung = 1000000
         for item in itr_list:
             this_changes, this_length, this_conn = item
-            bewertung = this_length / ((this_length * ((this_changes + 1) / 10)) ** (-0.33333)) + 1
+            bewertung = this_length / ((this_length * ((this_changes + 1) / 5)) ** (-0.33333)) + 1
             bwt_list.append((bewertung, this_changes, this_length, this_conn))
         bwt_list.sort(key=lambda a: a[0])
         for item in bwt_list:
