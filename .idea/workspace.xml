@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="81fc9ac3-db2e-4043-b3b7-eb9691781acb" name="Default Changelist" comment="fixed it">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trains/Route.py" beforeDir="false" afterPath="$PROJECT_DIR$/trains/Route.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/trains/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/trains/app.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trains/templates/connection.html" beforeDir="false" afterPath="$PROJECT_DIR$/trains/templates/connection.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/trains/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/trains/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/trains/ruten/u2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/trains/ruten/u2.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +29,7 @@
   </component>
   <component name="JupyterTrust" id="d8c56f79-57cf-4d37-a7ad-18b5ae5bbf0e" />
   <component name="ProjectId" id="1pG309cW3RwjzbCylYObMmjjMSc" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -147,7 +145,7 @@
         <item itemvalue="Python.test" />
         <item itemvalue="Python.Result" />
         <item itemvalue="Python.app" />
-        <item itemvalue="Python.app" />
+        <item itemvalue="Python.trains" />
       </list>
     </recent_temporary>
   </component>
@@ -180,7 +178,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="matze" />
+                        <option value="origin/matze" />
                       </list>
                     </value>
                   </entry>
