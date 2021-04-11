@@ -1,0 +1,61 @@
+import sqlite3
+from sqlite3 import Error
+import datetime
+
+
+def create_connection(path):
+    connection = None
+    try:
+        connection = sqlite3.connect(path)
+        print("Connection to SQLite DB successful")
+        return connection
+    except Error as e:
+        print(f"The error '{e}' occurred")
+
+
+def execute_query(conn, query):
+    cursor = conn.cursor()
+    try:
+        cursor.execute(query)
+        conn.commit()
+        print("Query executed successfully")
+    except Error as e:
+        print(f"The error '{e}' occurred")
+
+        
+def query_return(conn, sel, fro, whe):
+    cursor = conn.cursor()
+    try:
+        cursor.execute(f"SELECT {sel} FROM {fro} WHERE {whe};")
+        rows = cursor.fetchall()
+        print(f"Operation successfully executed on {fro}!")
+        return rows
+    except Error as e:
+        print(e)
+        return None
+
+    
+def show_next(devices, area):
+    lst = devices
+    lst.sort(key=lambda x: x[2])
+    n_lst = []
+    for element in lst:
+        date = datetime.datetime.strptime(element[2], '%Y-%m-%d %H:%M:%S')
+        diff = date - datetime.datetime.now()
+        if diff.days <= area:
+            n_lst.append(element)
+    n_lst.reverse()
+    return n_lst
+
+
+
+
+sel = "IDNumber, DeviceDescription, NextTest"
+fro = "tblIDNumbers"
+whe = "TestResult = 'OK'"
+
+conn = create_connection("./pcdrdata.sqlite3")
+
+area = 30
+
+show_next(query_return(conn, sel, fro, whe), area)
